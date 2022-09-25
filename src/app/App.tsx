@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
@@ -6,7 +7,7 @@ import { Navbar } from 'widgets/Navbar';
 import './styles/index.scss';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
+
 
 const App = () => {
   const { theme } = useTheme();

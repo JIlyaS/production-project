@@ -1,11 +1,6 @@
-import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 
-import LightIcon from 'shared/assets/icons/theme-light.svg';
-import DarkIcon from 'shared/assets/icons/theme-dark.svg';
-
 import cls from './Button.module.scss';
-import { Theme } from 'app/providers/ThemeProvider';
 import { ButtonHTMLAttributes } from 'react';
 
 export enum ThemeButton {
@@ -17,7 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton;
 }
 
-export const Button: React.FC<ButtonProps> = (props) => {
+export const CButton: React.FC<ButtonProps> = (props) => {
   const {
     className,
     children,
@@ -26,6 +21,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
   } = props;
   return (
     <button
+      type="button"
       className={classNames(cls.Button, {}, [className, cls[theme]])}
       {...otherProps}
     >
@@ -33,3 +29,9 @@ export const Button: React.FC<ButtonProps> = (props) => {
     </button>
   );
 };
+
+CButton.defaultProps = {
+  className: '',
+  children: null,
+  theme: null
+}
