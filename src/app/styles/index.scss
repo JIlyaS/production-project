@@ -1,17 +1,15 @@
-@import "./reset.scss";
-@import "./fonts.scss";
-@import "./variables/global.scss";
-@import "./themes/normal.scss";
-@import "./themes/dark.scss";
-
+@import "./reset";
+@import "./fonts";
+@import "./variables/global";
+@import "./themes/normal";
+@import "./themes/dark";
 
 .app {
-    // font-family: Roboto, Arial, serif;
-    font: var(--font-m);
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-
-    min-height: 100vh;
+  // font-family: Roboto, Arial, serif;
+  font: var(--font-m);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
 }
 
 a {
