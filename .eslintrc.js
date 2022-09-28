@@ -33,7 +33,8 @@ module.exports = {
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": [0],
-    "i18next/no-literal-string": ["off", { markupOnly: true }]
+    "i18next/no-literal-string": ["off", { markupOnly: true }],
+    "max-len": ['error', { ignoreComments: true, code: 100 }]
     // "react/jsx-props-no-spreading": "warn",
     // "react/function-component-definition": "off",
     // "no-shadow": "off",
