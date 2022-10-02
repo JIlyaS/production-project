@@ -5,12 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import ThemeProvider from 'app/providers/ThemeProvider/ui/ThemeProvider';
 
 import 'shared/config/i18n/i18n';
+import { ErrorBoudary } from 'app/providers/ErrorBoundary';
 
 render(
   <BrowserRouter>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <ErrorBoudary>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ErrorBoudary>
   </BrowserRouter>,
   document.getElementById('root')
 );

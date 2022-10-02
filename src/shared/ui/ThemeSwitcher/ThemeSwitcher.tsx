@@ -7,7 +7,7 @@ import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 
 import cls from './ThemeSwitcher.module.scss';
 import { Theme } from 'app/providers/ThemeProvider';
-import { CButton, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -16,12 +16,12 @@ interface ThemeSwitcherProps {
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <CButton
+    <Button
       theme={ThemeButton.CLEAR}
       className={classNames(cls.ThemeSwitcher, {}, [className])}
       onClick={toggleTheme}
     >
       {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
-    </CButton>
+    </Button>
   );
 };

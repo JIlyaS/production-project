@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { CButton, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 import cls from './LangSwitcher.module.scss';
 
@@ -17,12 +17,12 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
   }
 
   return (
-    <CButton
+    <Button
       className={classNames(cls.LangSwitcher, {}, [className])}
       theme={ThemeButton.CLEAR}
       onClick={toggle}
     >
       {t('Язык')}
-    </CButton>
+    </Button>
   );
 };
